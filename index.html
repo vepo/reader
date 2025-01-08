@@ -5,9 +5,15 @@
     <script src="app.js"></script>
 </head>
 <body>
-     <div ng-controller="ViewController as view">
-     </div>
-    <div ng-controller="SubscriptionsController as subscription">
+    <div ng-controller="SubscriptionsController as subscription" class="subscription">
+        <div class="header">
+            <button ng-click="subscription.add()">+</button>
+        </div>
+        <div ng-repeat="sub in subscription.subscriptions">
+            {{sub.name}}
+        </div>
     </div>
+    <div ng-controller="ViewController as view">
+     </div>
 </body>
 </html>
