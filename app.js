@@ -11,6 +11,9 @@ angular.module('readerApp', [])
       subtitle: "Um repositório para todos os posts, palestras e tutoriais que já fiz. Java, Desenvolvimento de Software e reflexões sobre filosofia",
       name: "Blog: Victor Osório"
     }];
+    ctrl.add = function() {
+      console.log("Adding new subscription...");
+    }
   }])
   .factory('$subscriptions', ['$http', function($http) {
     console.log('Starting Subscriptions Service', $http);
