@@ -3,8 +3,14 @@ angular.module('readerApp', [])
     console.log('Starting View Controller', $subscriptions, $subscriptions.call());
   }])
   .controller('SubscriptionsController', ['$subscriptions', function($subscriptions) {
-    console.log('Starting Subscriptions Controller', $subscriptions, $subscriptions.call());    
-    
+    console.log('Starting Subscriptions Controller', $subscriptions, $subscriptions.call());
+    var ctrl = this;
+    ctrl.subscriptions = [{
+      rss: "https://blog.vepo.dev/atom.xml",
+      title: "vepo",
+      subtitle: "Um repositório para todos os posts, palestras e tutoriais que já fiz. Java, Desenvolvimento de Software e reflexões sobre filosofia",
+      name: "Blog: Victor Osório"
+    }];
   }])
   .factory('$subscriptions', ['$http', function($http) {
     console.log('Starting Subscriptions Service', $http);
