@@ -1,14 +1,13 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="readerApp">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
-    <div>
-        <label>Name:</label>
-        <input type="text" ng-model="yourName" placeholder="Enter a name here">
-        <hr>
-        <h1>Hello {{yourName}}!</h1>
+     <div ng-controller="ViewController as view">
+     </div>
+    <div ng-controller="SubscriptionsController as subscription">
     </div>
 </body>
 </html>
