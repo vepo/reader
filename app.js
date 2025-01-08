@@ -7,4 +7,4 @@ angular.module('readerApp', [])
   }])
   .factory('$subscriptions', ['$http', function($http) {
     console.log('Starting Subscriptions Service', $http);
-  });
+  }]);
